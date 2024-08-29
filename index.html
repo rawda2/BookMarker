@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <link rel="stylesheet" href="./CSS/style.css?v=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./CSS/all.css">
+</head>
+<body>
+    <header class="text-center header py-3">
+        <h1>BookMarker</h1>
+    </header>
+
+    <main class="d-flex justify-content-center flex-wrap position-relative">
+
+        <section class="form d-flex justify-content-center align-items-center flex-column my-auto pb-5">
+    <div class=" d-flex align-items-center p-1 w-100 justify-content-center">
+                <i class="fa-solid fa-bookmark p-3 mb-3 "></i>
+                <h3 class="pb-4 pt-3">Bookmark your favorite sites</h3>
+                <i class="fa-solid fa-bookmark p-3 mb-3"></i>
+             </div>
+          
+              <form action="" class="my-auto " id="myForm">
+                <label for="name" class="p-2"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+                <input type="text" id="name" class="form-control mb-4 " placeholder="BookMark Name">
+                <label for="url" class="p-2"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                <input type="url" id="url" class="form-control " placeholder="WebSite URL">
+                <button id="submit" type="submit" onclick="addwebsite();"  class="btn mx-auto mt-4 rounded  px-5 py-1 text-light d-block">Submit</button>
+              </form>
+
+              <nav class="navbar  w-75 mt-4">
+                <div class="container-fluid">
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2 " type="search" placeholder="Search by name" aria-label="Search" id="search">
+                    <button class="btn text-light" type="button" id="S_button">Search</button>
+                  </form>
+                </div>
+              </nav>
+        </section>
+        <section class="tablee">
+            <table class="table w-100 text-center my-3">
+                <thead >
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </section>
+     
+        
+    </main>
+    
+    <section class="alert  w-100 vh-100 position-fixed top-0 start-0 d-flex justify-content-center align-items-center" id="customAlert">
+        <div class="content p-4 bg-light rounded-2">
+            <div class="icons d-flex justify-content-between bg-light py-3">
+                <div class="icoon bg-light">
+                    <i class="fa-solid fas fa-circle text-danger fa-lg bg-light"></i>
+                <i class="fa-solid fas fa-circle text-warning fa-lg bg-light"></i>
+                <i class="fa-solid fas fa-circle text-success fa-lg bg-light"></i>
+                </div>
+                
+                <div class="close bg-light">
+                    <i class="fa-solid fa-xmark fa-2xl bg-light" id="closeAlert"></i>
+                </div>
+            </div>
+           
+            <h3 class="bg-light">Site Name or Url is not valid, Please follow the rules below: </h3>
+            <p class="bg-light py-1"><i class="fa-regular fa-circle-right bg-light text-danger fa-lg "></i>  Site name must contain at least 3 characters</p>
+            <p class="bg-light py-1"><i class="fa-regular fa-circle-right bg-light text-danger fa-lg"></i> Site URL must be a valid one</p>
+        </div>
+    </section>
+    
+    <script src="./bootstrap/js/script.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
